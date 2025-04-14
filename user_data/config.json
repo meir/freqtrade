@@ -7,6 +7,9 @@
   "trading_mode": "spot",
   "margin_mode": "",
   "custom_leverage": 1,
+  "timeframe": "15m",
+  "timeframe_detail": "1m",
+  "informative_timeframe": "1h",
   "unfilledtimeout": {
     "entry": 10,
     "exit": 10,
