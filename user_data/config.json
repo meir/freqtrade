@@ -28,7 +28,6 @@
     "use_order_book": true,
     "order_book_top": 1
   },
-  "timeframe": "15m",
   "tradable_balance_ratio": 0.99,
   "stake_amount": "unlimited",
   "amend_last_stake_amount": true,
@@ -55,7 +54,25 @@
   },
   "pairlists": [
     {
-      "method": "StaticPairList"
+      "method": "VolumePairList",
+      "number_assets": 100,
+      "sort_key": "quoteVolume",
+      "refresh_period": 1800
+    },
+    { "method": "FullTradesFilter" },
+    { "method": "AgeFilter", "min_days_listed": 30 },
+    {
+      "method": "PriceFilter",
+      "low_price_ratio": 0.003
+    },
+    {
+      "method": "SpreadFilter",
+      "max_spread_ratio": 0.008
+    },
+    {
+      "method": "VolumePairList",
+      "number_assets": 80,
+      "sort_key": "quoteVolume"
     }
   ],
   "telegram": {
